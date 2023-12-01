@@ -5,6 +5,12 @@ class GlslExtractor < Formula
   sha256 "739182621cef591282b611a1fcc5b5038558987bdf7647dc5f3fbfc1dae14f36"
   head "https://github.com/j-junckes/glsl_extractor.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/j-junckes/homebrew-repo/releases/download/glsl_extractor_v0.3.0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "0681f1f96af187c64d5e9495338d40aece17526fc0a176486f9edaee51ce1cc1"
+  end
+
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "git" => :build
